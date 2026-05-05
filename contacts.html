@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Contact us</h1>
-        <nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale 1.0">
+        <title>Add Waste</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+          <h1>Add Waste Data</h1>
+          <nav>
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
-            <a href="contacts.html">Contacts</a>
-        </nav>
-    </header>
+            <a href="contacts.html" class="active">Add Waste</a>
+          </nav>
+        </header>
 
-    <section>
-        <h2>Get in Touch</h2>
-        
-        <form onsubmit="return submitForm()">
-            <input type="text" id="name" placeholder="Your Name"
-            required>
-            <input type="email" id="email" placeholder="your Email"
-            required>
-            <textarea id="message" place holder="Your Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <footer>
-        <p>We care about your environment and ecosystem</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+
+
+
+
+
+    </body>
 </html>
 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Waste</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <h1>Add Waste Data</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="active">Add Waste</a>
+  </nav>
+</header>
+
+<main>
+<section>
+  <form id="wasteForm">
+    <input type="text" id="type" placeholder="Waste type" required>
+    <input type="number" id="amount" placeholder="Amount (kg)" required>
+    <button type="submit">Save</button>
+  </form>
+
+  <p id="message"></p>
+</section>
+</main>
+
+<footer>
+  <p>Track waste responsibly 🌍</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
