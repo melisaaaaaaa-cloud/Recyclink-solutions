@@ -79,23 +79,3 @@ nav{
 
 
 
-
-
-
-/* Animation */
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav {
-    flex-direction: column;
-  }
-}
