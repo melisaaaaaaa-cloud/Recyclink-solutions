@@ -25,66 +25,51 @@ nav a.active {
   border-radius: 5px;
 }
 .hero{
-  background: linear-gradient(to right, #2e7d32, #66bb6a)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-nav a.active {
-  background: #4caf50;
-  border-radius: 5px;
-}
-
-/* Hero */
-.hero {
   background: linear-gradient(to right, #2e7d32, #66bb6a);
   color: white;
   padding: 40px;
   text-align: center;
   animation: fadeIn 2s ease-in;
 }
-
-/* Cards */
-.cards {
+.cards{
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 20px;
 }
-
-.card {
+.card{
   background: white;
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s;
 }
-
 .card:hover {
   transform: scale(1.1);
 }
+form{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: auto;
+}
+input, button{
+  margin: 10px 0;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Form */
 form {
