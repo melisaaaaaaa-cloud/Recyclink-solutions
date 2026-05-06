@@ -3,6 +3,11 @@ document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
 
     let type = document.getElementById("type").value;
     let amount = parseFloat(document.getElementById("amount").value);
+
+
+    if(!type || !amount){
+        document.getElementById("message")
+    }
 })
 
 
@@ -11,7 +16,7 @@ document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
 
 
 
-
+ 
 
 
 
