@@ -1,3 +1,4 @@
+// SAVE DATA
 document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -18,6 +19,13 @@ document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
     document.getElementById("message").innerText = "Saved!";
 });
 
+// DISPLAY DATA
+function displayData() {
+    let data = 
+}
+
+
+
 
 
 
@@ -37,25 +45,6 @@ document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
 
 
 
-// SAVE DATA
-document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    let type = document.getElementById("type").value;
-    let amount = parseFloat(document.getElementById("amount").value);
-
-    if (!type || !amount) {
-        document.getElementById("message").innerText = "Fill all fields!";
-        return;
-    }
-
-    let data = JSON.parse(localStorage.getItem("wasteData")) || [];
-    data.push({ type, amount });
-
-    localStorage.setItem("wasteData", JSON.stringify(data));
-
-    document.getElementById("message").innerText = "Saved!";
-});
 
 // DISPLAY DATA
 function displayData() {
