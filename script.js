@@ -6,9 +6,17 @@ document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
 
 
     if(!type || !amount){
-        document.getElementById("message")
+        document.getElementById("message").innerText = "Fill all fields!";
+        return;
     }
-})
+
+    let data = JSON.parse(localStorage.getItem("wasteData")) || [];
+    data.push({ type, amount})
+
+    localStorage.setItem("wasteData", JSON.stringify(data));
+
+    document.getElementById("message").innerText = "Saved!";
+});
 
 
 
