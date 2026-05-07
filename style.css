@@ -69,6 +69,52 @@ nav{
   flex-direction: column;
 }
 }
+.contacts-section{
+  background: white;
+  width: 80%;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.contact-section form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-section input{
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.contact-section input{
+padding: 12px;
+border-radius: 6px;
+border: 1px solid #ccc;
+}
+.contact-section button{
+background: #2e7d32;
+color: white;
+border: none;
+padding: 12px;
+border-radius: 6px;
+cursor: pointer;
+transition: 0.3s;
+}
+.contact-section button:hover{
+  background: #1b5e20;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
