@@ -1,37 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale 1.0">
-        <title>Add Waste</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-          <h1>Add Waste Data</h1>
-          <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="contacts.html" class="active">Add Waste</a>
-          </nav>
-        </header>
+  <head>
 
-        <main>
-          <section>
-            <form id="Wasteform">
-              <input type="text" id="type" placeholder="Waste type" required>
-              <input type="number" id="amount" placeholder="Amount (kg)" required>
-              <button type="submit">Save</button> 
-            </form>
-            <p id="message"></p>
-          </section>
-        </main>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Recyclink</title>
 
-        <footer>
-          <p>Track Waste responsibly 🌍</p>
-        </footer>
+    <link rel="stylesheet" href="style.css">
 
-        <script src="script.js"></script>
-    </body>
+  </head>
+
+  <body>
+    <header>
+      <h1></h1>
+    </header>
+
+  </body>
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
 
+
+
+
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join RecycLink</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Join RecycLink Solutions ♻️</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contacts.html" class="active">Contact</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <!-- Waste Collection Form -->
+
+    <section class="contact-section">
+
+        <h2>🗑️ Request Waste Collection</h2>
+
+        <form id="collectionForm">
+
+            <input type="text"
+                   id="residentName"
+                   placeholder="Your Name"
+                   required>
+
+            <input type="text"
+                   id="location"
+                   placeholder="Your Location"
+                   required>
+
+            <input type="text"
+                   id="wasteType"
+                   placeholder="Type of Waste"
+                   required>
+
+            <button type="submit">
+                Request Collection
+            </button>
+
+        </form>
+
+        <p id="collectionMessage"></p>
+
+    </section>
+
+    <!-- Lorry Registration -->
+
+    <section class="contact-section">
+
+        <h2>🚛 Join as a Waste Collector</h2>
+
+        <form id="lorryForm">
+
+            <input type="text"
+                   id="driverName"
+                   placeholder="Driver Name"
+                   required>
+
+            <input type="text"
+                   id="lorryNumber"
+                   placeholder="Lorry Number Plate"
+                   required>
+
+            <input type="text"
+                   id="area"
+                   placeholder="Area of Operation"
+                   required>
+
+            <button type="submit">
+                Join Network
+            </button>
+
+        </form>
+
+        <p id="lorryMessage"></p>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        &copy; 2026 RecycLink Solutions 🌍
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
