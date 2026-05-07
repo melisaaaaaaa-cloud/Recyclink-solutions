@@ -171,6 +171,20 @@ function displayData() {
 }
 displayData();
 
+// ====
+// PIE CHART
+// ====
+function drawChart(totals) {
+    let canvas =
+    document.getElementById("chart");
+
+    if(!canvas) return;
+
+    let ctx =
+    canvas.getContext("2d")
+    
+}
+
 
         
 
@@ -383,8 +397,6 @@ function toggleDark() {
     );
 }
  
-
-
 
 
 
