@@ -239,97 +239,93 @@ function drawChart(totals) {
         let ctx =
         canvas.getContext("2d");
 
-        let labels =
+        let labels = [
+            "Plastic",
+            "Dirty Water",
+            "Air",
+            "Glass",
+            "Organic",
+        ];
+        let values = [
+            90,
+            75,
+            60,
+            45,
+            55,
+        ];
+        ;
+        let barWidth = 70;
+
+        let gap = 25;
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+        values.forEach((value,index)=>{
+            let x =
+            index * (barWidth + gap)
+            +40;
+
+            let y =
+            300 - value * 2;
+
+            ctx.fillStyle =
+            "#2e7d32";
+
+            ctx.fillRect(
+                x,
+                y,
+                barWidth,
+                value * 2
+            );
+
+            ctx.fillStyle =
+            "#2e7d32";
+
+            ctx.fillRect(
+                x,
+                y,
+                barWidth,
+                value * 2
+            );
+
+            ctx.fillStyle =
+            "#2e7d32";
+
+            ctx.fillStyle =
+            "#000";
+
+            ctx.font =
+            "14 px Arial";
+
+            ctx.fillText(
+                labels[index],
+                x,
+                320
+            );
+
+            ctx.fillText(
+                value + "%",
+                x + 10,
+                y - 10
+            );
+        });
     }
+
+    drawPollutionChart();
 }
+
+
+// ====
+// S
 
 
         
 
 
-// ===============================
-// POLLUTION BAR CHART
-// ===============================
-
-function drawPollutionChart() {
-
-    let canvas =
-    document.getElementById(
-    "pollutionChart"
-    );
-
-    if(!canvas) return;
-
-    let ctx =
-    canvas.getContext("2d");
-
-    let labels = [
-        "Plastic",
-        "Dirty Water",
-        "Air",
-        "Glass",
-        "Organic"
-    ];
-
-    let values = [
-        90,
-        75,
-        60,
-        45,
-        55
-    ];
-
-    let barWidth = 70;
-
-    let gap = 25;
-
-    ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-    values.forEach((value,index)=>{
-
-        let x =
-        index * (barWidth + gap)
-        + 40;
-
-        let y =
-        300 - value * 2;
-
-        ctx.fillStyle =
-        "#2e7d32";
-
-        ctx.fillRect(
-            x,
-            y,
-            barWidth,
-            value * 2
-        );
-
-        ctx.fillStyle =
-        "#000";
-
-        ctx.font =
-        "14px Arial";
-
-        ctx.fillText(
-            labels[index],
-            x,
-            320
-        );
-
-        ctx.fillText(
-            value + "%",
-            x + 10,
-            y - 10
-        );
-
-    });
-
-}
 
 drawPollutionChart();
 
