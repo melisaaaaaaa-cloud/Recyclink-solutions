@@ -310,24 +310,27 @@ function drawChart(totals) {
             ctx.fillText(
                 value + "%",
                 x + 10,
-                y - 10
+                y - 10,
             );
         });
     }
-
     drawPollutionChart();
 }
 
 
 // ====
-// S
+// SEARCH FUNCTION
+// ====
+function filterData() {
+    
+}
+
 
 
         
 
 
 
-drawPollutionChart();
 
 
 // ===============================
