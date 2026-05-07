@@ -21,7 +21,24 @@ document.getElementById("wasteForm")?.addEventListener("submit", function(e) {
 
 // DISPLAY DATA
 function displayData() {
-    let data = 
+    let data = JSON.parse(localStorage.getItem("wasteData")) || []
+    let list = document.getElementById("dataList");
+    
+    if(!list) return;
+
+list.innerHTML = "";
+
+let totals = {};
+
+data.forEach(item => {
+    let li = document.createElement("li");
+    li.innerText = `${item.type} - ${item.amount}kg`;
+    list.appendChild(li);
+
+    totals[item.type] = (totals[item.type] || 0) + item.amount;
+});
+
+drawChart(totals);
 }
 
 
