@@ -52,7 +52,14 @@ function drawChart(totals) {
 
     let total = values.reduce((a, b) => a + b, 0);
     let start = 0;
-    
+
+    keys.forEach((key, i) => {
+        let slice = (values[i] / total) * 2 * Math.PI;
+
+        ctx.beginPath();
+        ctx.moveTo(150,150);
+    })
+
 }
 
 
