@@ -200,7 +200,13 @@ function drawChart(totals) {
     values.reduce((a,b)=>a+b,0);
 
     let start = 0;
-    
+
+    keys.forEach((key, index)=>{
+        
+        let slice =
+        
+    })
+
 
 
     
