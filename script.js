@@ -43,50 +43,48 @@ function showPlasticInfo() {
 // ====
 // SERVICES PAGE INFO
 // ====
-
-
-
-
-
-
-
-
-
-
-
-// ===============================
-// SERVICES PAGE INFO
-// ===============================
-
 function showService(type) {
 
-    let serviceInfo =
+    let serviceInfo = 
     document.getElementById("serviceInfo");
 
     if(!serviceInfo) return;
 
     let message = "";
-
     if(type === "water") {
 
         message =
-        "Our water recycling system uses treated animal dung and natural filtration to clean dirty water safely.";
+        "Our recyling system uses treated animal dung and natural filtration to clean dirty water safely.";
     }
 
     else if(type === "plastic") {
 
-        message =
-        "Plastic waste is recycled into reusable water bottles to reduce environmental pollution.";
+        message = 
+        "Plastic waste is recycled into reusable water bottle to reduce environmental pollution.";
     }
 
     else if(type === "collection") {
-
         message =
-        "Residents can request waste collection while lorry owners join our recycling network.";
+        "Residents can request waste collection while lorry owners can join our network.";
     }
 
     serviceInfo.innerText = message;
 }
+
+// ====
+// SAVE WASTE DATA 
+// ====
+let wasteForm =
+document.getElementById
+
+
+
+
+
+
+
+
+
 
 
 // ===============================
