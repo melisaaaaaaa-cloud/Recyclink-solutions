@@ -102,50 +102,20 @@ function(e){
     if(
        !type.trim() ||
        isNaN(amount) ||
-    ) 
-
-
-
-
-
-}
-
-    )
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // VALIDATION
-
-    if(
-        !type.trim() ||
-        isNaN(amount) ||
-        amount <= 0
+       amount <= 0
     ){
 
         message.innerText =
         "Please enter valid data.";
 
         return;
+
     }
-
     // LOCAL STORAGE
-
     let data =
     JSON.parse(
-    localStorage.getItem("wasteData")
+        localStorage.getItem("wasteData")
+
     ) || [];
 
     data.push({
@@ -160,12 +130,32 @@ function(e){
     );
 
     message.innerText =
-    "Waste data saved successfully!";
+    "waste data saved successfully!";
 
     wasteForm.reset();
-
 });
+
+// ====
+// DISPLAY SAVED DATA
+// ====
+function displayData() {
+    let data =
+    JSON.parse(
+        localStorage.getItem2("wasteData")
+    ) || [];
+     let list =
+     document.getElementById("dataList");
+
+     if(!list) return;
+
+     list.innerHTML = "";
+
+     let totals = {};
+
+
 }
+
+
 
 
 // ===============================
