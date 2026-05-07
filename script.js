@@ -152,38 +152,11 @@ function displayData() {
 
      let totals = {};
 
-
-}
-
-
-
-
-// ===============================
-// DISPLAY SAVED DATA
-// ===============================
-
-function displayData() {
-
-    let data =
-    JSON.parse(
-    localStorage.getItem("wasteData")
-    ) || [];
-
-    let list =
-    document.getElementById("dataList");
-
-    if(!list) return;
-
-    list.innerHTML = "";
-
-    let totals = {};
-
-    data.forEach(item => {
-
-        let li =
+     data.forEach(item => {
+        let li
         document.createElement("li");
 
-        li.innerText =
+        li.innerText = "";
         `${item.type} - ${item.amount}kg (${item.date})`;
 
         list.appendChild(li);
@@ -192,12 +165,14 @@ function displayData() {
         (totals[item.type] || 0)
         + item.amount;
 
-    });
+     });
 
-    drawChart(totals);
+     drawChart(totals);
 }
-
 displayData();
+
+
+        
 
 
 // ===============================
