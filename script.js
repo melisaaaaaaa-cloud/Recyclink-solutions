@@ -58,18 +58,15 @@ function drawChart(totals) {
 
         ctx.beginPath();
         ctx.moveTo(150,150);
-    })
+        ctx.arc(150,150,100,start,start, + slice);
+        ctx.fillStyle = `hsl(&{i * 80}, 70%, 50%)`;
+        ctx.fill();
 
+        start += slice;
+    });
 }
 
-
-
-
-
-
-
-
-
+displayData();
  
 
 
@@ -86,29 +83,3 @@ function drawChart(totals) {
 
 
 
-// DRAW SIMPLE CHART
-function drawChart(totals) {
-    let canvas = document.getElementById("chart");
-    if (!canvas) return;
-
-    let ctx = canvas.getContext("2d");
-    let keys = Object.keys(totals);
-    let values = Object.values(totals);
-
-    let total = values.reduce((a, b) => a + b, 0);
-    let start = 0;
-
-    keys.forEach((key, i) => {
-        let slice = (values[i] / total) * 2 * Math.PI;
-
-        ctx.beginPath();
-        ctx.moveTo(150,150);
-        ctx.arc(150,150,100,start,start + slice);
-        ctx.fillStyle = `hsl(${i * 80}, 70%, 50%)`;
-        ctx.fill();
-
-        start += slice;
-    });
-}
-
-displayData();
