@@ -226,6 +226,21 @@ function drawChart(totals) {
 
 
     // ====
+    // POLLUTION BAR CHART 
+    // ====
+    funtion drawPollutionChart() {
+        let canvas = 
+        document.getElementById(
+            "pollutionChart"
+        );
+
+        if(!canvas) return;
+
+        let ctx =
+        canvas.getContext("2d");
+
+        let labels =
+    }
 }
 
 
