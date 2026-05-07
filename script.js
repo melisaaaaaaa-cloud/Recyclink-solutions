@@ -183,7 +183,16 @@ function drawChart(totals) {
     let ctx =
     canvas.getContext("2d");
 
-    ctx.clearRect
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    let keys =
+    Object.keys(totals);
+    
 
 }
 
