@@ -75,7 +75,16 @@ function showService(type) {
 // SAVE WASTE DATA 
 // ====
 let wasteForm =
-document.getElementById
+document.getElementById("wasteForm");
+if(wasteForm){
+
+    wasteForm.addEventListener("submit",
+function(e){}
+
+    )
+
+}
+
 
 
 
