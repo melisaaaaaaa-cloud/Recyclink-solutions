@@ -204,7 +204,23 @@ function drawChart(totals) {
     keys.forEach((key, index)=>{
         
         let slice =
-        
+        (values[index] / total)
+        * 2 * Math.PI;
+
+        ctx.beginPath();
+
+        ctx.moveTo(150,150);
+
+        ctx.arc(
+            150,
+            150,
+            100,
+            start,
+            start + slice
+        );
+
+
+
     })
 
 
