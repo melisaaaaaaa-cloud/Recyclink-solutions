@@ -192,6 +192,17 @@ function drawChart(totals) {
 
     let keys =
     Object.keys(totals);
+
+    let values =
+    Object.values(totals);
+
+    let total =
+    values.reduce((a,b)=>a+b,0);
+
+    let start = 0;
+    
+
+
     
 
 }
