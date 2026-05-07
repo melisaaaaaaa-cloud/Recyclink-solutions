@@ -322,7 +322,17 @@ function drawChart(totals) {
 // SEARCH FUNCTION
 // ====
 function filterData() {
-    
+    let input =
+    document.getElementById("search");
+
+    if(!input) return;
+
+    let filter =
+    input.value.toLowerCase();
+
+    let items = 
+    document.querySelectorAll()
+
 }
 
 
