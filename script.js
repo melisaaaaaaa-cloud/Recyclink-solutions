@@ -100,7 +100,8 @@ function(e){
 
     // VALIDATION
     if(
-       !type.trim 
+       !type.trim() ||
+       isNaN(amount) ||
     ) 
 
 
