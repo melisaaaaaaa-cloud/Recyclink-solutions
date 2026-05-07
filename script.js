@@ -99,6 +99,9 @@ function(e){
     document.getElementById("message");
 
     // VALIDATION
+    if(
+       !type.trim 
+    ) 
 
 
 
