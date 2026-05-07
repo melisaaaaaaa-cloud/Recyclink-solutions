@@ -331,7 +331,22 @@ function filterData() {
     input.value.toLowerCase();
 
     let items = 
-    document.querySelectorAll()
+    document.querySelectorAll(
+        "#dataList li"
+    );
+
+    items.forEach (item =>  {
+        item.style.display =
+        item.innerText
+        .toLowerCase()
+        .includes(filter)
+
+        ? "block"
+
+        : 
+
+    }
+    )
 
 }
 
