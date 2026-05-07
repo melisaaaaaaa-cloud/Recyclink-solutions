@@ -79,7 +79,24 @@ document.getElementById("wasteForm");
 if(wasteForm){
 
     wasteForm.addEventListener("submit",
-function(e){}
+function(e){
+
+    e.preventDefault();
+
+    let type =
+    document.getElementById("type").value
+
+    let amount =
+    parseFloat(
+        document.getElementById("amount").value
+        );
+
+        let date 
+        document.getElementById("date")
+
+
+
+}
 
     )
 
