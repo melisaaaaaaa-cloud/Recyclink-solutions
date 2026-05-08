@@ -1,127 +1,157 @@
+/* ===== GENERAL RESET ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
 body{
-  font-family: Arial;
-  margin: 0;
-  background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background: #f4fdf6;
+    color: #222;
+    line-height: 1.6;
 }
 
+/* ===== HEADER ===== */
 header{
-  background:#2e7d32;
-  color: white;
-  padding: 15px;
-  text-align: center;
+    background: #0b6b3a;
+    color: white;
+    padding: 20px;
 }
-nav{
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-nav a.active {
-  background: #4caf50;
-  border-radius: 5px;
-}
-.hero{
-  background: linear-gradient(to right, #2e7d32, #66bb6a);
-  color: white;
-  padding: 40px;
-  text-align: center;
-  animation: fadeIn 2s ease-in;
-}
-.cards{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-.card{
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: scale(1.1);
-}
-form{
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  margin: auto;
-}
-input, button{
-  margin: 10px 0;
-  padding: 10px;
-}
-@keyframes fadeIn{
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-@media(max-width: 768px) {
-  .cards {
-    flex-direction: column;
+
+.logo-container{
+    display: flex;
     align-items: center;
-  }
+    gap: 15px;
+}
+
+/* ===== LOGO ===== */
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+/* ===== NAVIGATION ===== */
 nav{
-  flex-direction: column;
-}
-}
-.contacts-section{
-  background: white;
-  width: 80%;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
-.contact-section form{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contact-section input{
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-.contact-section input{
-padding: 12px;
-border-radius: 6px;
-border: 1px solid #ccc;
-}
-.contact-section button{
-background: #2e7d32;
-color: white;
-border: none;
-padding: 12px;
-border-radius: 6px;
-cursor: pointer;
-transition: 0.3s;
-}
-.contact-section button:hover{
-  background: #1b5e20;
+    margin-top: 15px;
 }
 
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
+nav a:hover{
+    color: yellow;
+}
 
+/* ===== HERO SECTION ===== */
+.hero{
+    text-align: center;
+    padding: 60px 20px;
+}
 
+.hero h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 
+/* ===== ALL BUTTONS ===== */
+button,
+.community-btn{
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
 
+/* BUTTON HOVER EFFECT */
+button:hover,
+.community-btn:hover{
+    background: #0f7a35;
+    transform: scale(1.05);
+}
 
+/* ===== SHOWCASE IMAGE ===== */
+.dashboard-image{
+    width: 90%;
+    max-width: 800px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
 
+/* ===== INNOVATION SECTION ===== */
+.innovations{
+    padding: 50px 20px;
+    text-align: center;
+}
 
+/* FLEX CONTAINER */
+.innovation-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
 
+/* CARDS */
+.innovation-card{
+    background: white;
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
 
+/* CARD HOVER */
+.innovation-card:hover{
+    transform: translateY(-10px);
+}
 
+/* CARD IMAGES */
+.innovation-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 15px 0;
+}
 
+/* ===== COMMUNITY SECTION ===== */
+.community-section{
+    text-align: center;
+    padding: 60px 20px;
+    background: #dff7e5;
+}
 
+.community-buttons{
+    margin-top: 25px;
+}
 
-
-
-
-
-
+/* ===== FOOTER ===== */
+footer{
+    background: #0b6b3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
