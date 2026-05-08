@@ -83,6 +83,7 @@ Media queries and flexible layouts were used.
 
 - Charts may not resize perfectly on very small screens
 - localStorage data clears when browser storage is removed
+- services image is not resizable
 
 # 👩‍💻 Author
 
