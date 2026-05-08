@@ -1,4 +1,4 @@
-/* ===== GENERAL RESET ===== */
+/* =====GENERAL=====*/
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +15,6 @@ body{
 
 /* ===== HEADER ===== */
 header{
-
     background: #0b6b3a;
     color: white;
 
@@ -25,9 +24,10 @@ header{
 
     padding: 15px 40px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-
+/* ===== LOGO AREA =====*/
 .logo-container{
     display: flex;
     align-items: center;
@@ -43,7 +43,15 @@ header{
     border: 3px solid white;
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== LOGO IMAGE ===== */
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== NAVIGATION BAR===== */
 nav{
     margin-top: 15px;
 }
@@ -166,25 +174,9 @@ footer{
 
 
 
-/* ===== HEADER ===== */
-header{
-    background: #0b6b3a;
-    color: white;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    padding: 15px 40px;
-    flex-wrap: wrap;
-}
 
-/* ===== LOGO AREA ===== */
-.logo-container{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
 /* ===== LOGO IMAGE ===== */
 .logo{
@@ -286,4 +278,46 @@ nav a:hover{
     .service-card{
         width: 90%;
     }
+}
+
+
+
+
+
+
+
+
+
+/* ===== LOGO ===== */
+.logo{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+/* ===== TITLE ===== */
+.logo-container h1{
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+/* ===== NAVIGATION ===== */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ===== NAV LINKS ===== */
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: yellow;
 }
