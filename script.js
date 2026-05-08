@@ -228,7 +228,7 @@ function drawChart(totals) {
     // ====
     // POLLUTION BAR CHART 
     // ====
-    funtion drawPollutionChart() {
+    function drawPollutionChart() {
         let canvas = 
         document.getElementById(
             "pollutionChart"
@@ -343,79 +343,33 @@ function filterData() {
 
         ? "block"
 
-        : 
+        : "none"
+    });
+
+    // ====
+    // CLEAR DATA
+    //====
+    function clearData() {
+        localStorage.removeItem(
+            "wasteData"
+        );
+        location.reload();
 
     }
-    )
+
+    // ====
+    // DARK MODE
+    // ====
+    
+    function clearData(){
+        document.body.classList.toggle(
+            "dark"
+        );
+    }
 
 }
 
 
-
-        
-
-
-
-
-
-// ===============================
-// SEARCH FUNCTION
-// ===============================
-
-function filterData() {
-
-    let input =
-    document.getElementById("search");
-
-    if(!input) return;
-
-    let filter =
-    input.value.toLowerCase();
-
-    let items =
-    document.querySelectorAll(
-    "#dataList li"
-    );
-
-    items.forEach(item => {
-
-        item.style.display =
-        item.innerText
-        .toLowerCase()
-        .includes(filter)
-
-        ? "block"
-
-        : "none";
-
-    });
-}
-
-
-// ===============================
-// CLEAR DATA
-// ===============================
-
-function clearData() {
-
-    localStorage.removeItem(
-    "wasteData"
-    );
-
-    location.reload();
-}
-
-
-// ===============================
-// DARK MODE
-// ===============================
-
-function toggleDark() {
-
-    document.body.classList.toggle(
-    "dark"
-    );
-}
  
 
 
