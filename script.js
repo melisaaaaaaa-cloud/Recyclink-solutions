@@ -115,6 +115,61 @@ function(e){
     let data =
     JSON.parse(
         localStorage.getItem("wasteData")
+    function drawChart(totals) {
+
+    let canvas =
+    document.getElementById("chart");
+
+    if(!canvas) return;
+
+    let ctx =
+    canvas.getContext("2d");
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    let keys =
+    Object.keys(totals);
+
+    let values =
+    Object.values(totals);
+
+    let total =
+    values.reduce((a,b)=>a+b,0);
+
+    let start = 0;
+
+    keys.forEach((key,index)=>{
+
+        let slice =
+        (values[index] / total)
+        * 2 * Math.PI;
+
+        ctx.beginPath();
+
+        ctx.moveTo(150,150);
+
+        ctx.arc(
+            150,
+            150,
+            100,
+            start,
+            start + slice
+        );
+
+        ctx.fillStyle =
+        `hsl(${index * 80},70%,50%)`;
+
+        ctx.fill();
+
+        start += slice;
+
+    });
+}
 
     ) || [];
 
@@ -138,6 +193,7 @@ function(e){
 // ====
 // DISPLAY SAVED DATA
 // ====
+
 function displayData() {
     let data =
     JSON.parse(
@@ -174,6 +230,7 @@ displayData();
 // ====
 // PIE CHART
 // ====
+
 function drawChart(totals) {
     let canvas =
     document.getElementById("chart");
@@ -228,6 +285,7 @@ function drawChart(totals) {
     // ====
     // POLLUTION BAR CHART 
     // ====
+
     function drawPollutionChart() {
         let canvas = 
         document.getElementById(
@@ -321,6 +379,7 @@ function drawChart(totals) {
 // ====
 // SEARCH FUNCTION
 // ====
+
 function filterData() {
     let input =
     document.getElementById("search");
@@ -367,6 +426,63 @@ function filterData() {
         );
     }
 
+}
+
+
+function drawChart(totals) {
+
+    let canvas =
+    document.getElementById("chart");
+
+    if(!canvas) return;
+
+    let ctx =
+    canvas.getContext("2d");
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    let keys =
+    Object.keys(totals);
+
+    let values =
+    Object.values(totals);
+
+    let total =
+    values.reduce((a,b)=>a+b,0);
+
+    let start = 0;
+
+    keys.forEach((key,index)=>{
+
+        let slice =
+        (values[index] / total)
+        * 2 * Math.PI;
+
+        ctx.beginPath();
+
+        ctx.moveTo(150,150);
+
+        ctx.arc(
+            150,
+            150,
+            100,
+            start,
+            start + slice
+        );
+
+        ctx.fillStyle =
+        `hsl(${index * 80},70%,50%)`;
+
+        ctx.fill();
+
+        start += slice;
+
+    });
 }
 
 
