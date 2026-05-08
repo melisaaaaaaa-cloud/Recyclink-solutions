@@ -1,502 +1,170 @@
-// =====
-// MISSION BUTTON 
-// =====
-function showMission() {
+// ===============================
+// RECYCLINK SOLUTIONS JAVASCRIPT
+// ===============================
 
-    let mission =
-    document.getElementById("mission");
+document.addEventListener("DOMContentLoaded", function () {
+  // ===============================
+  // WASTE DATA
+  // ===============================
 
-    if(mission){
+  const wasteData = [
+    "♻️ Plastic Waste - 120kg",
+    "🗑️ Organic Waste - 95kg",
+    "📦 Paper Waste - 70kg",
+    "🔋 Electronic Waste - 40kg",
+    "🧴 Glass Waste - 55kg",
+  ];
 
-        mission.innerText =
-        "Our mission is to reduce pullution by truning waste into reusable resources.";
+  // DISPLAY DATA
+  const dataList = document.getElementById("dataList");
+
+  wasteData.forEach(function (item) {
+    const li = document.createElement("li");
+    li.textContent = item;
+
+    dataList.appendChild(li);
+  });
+
+  // ===============================
+  // SIMPLE PIE CHART
+  // ===============================
+
+  const chartCanvas = document.getElementById("chart");
+
+  if (chartCanvas) {
+    const ctx = chartCanvas.getContext("2d");
+
+    const data = [120, 95, 70, 40, 55];
+
+    const colors = ["#16a34a", "#22c55e", "#4ade80", "#86efac", "#14532d"];
+
+    const total = data.reduce((a, b) => a + b, 0);
+
+    let startAngle = 0;
+
+    for (let i = 0; i < data.length; i++) {
+      let sliceAngle = (data[i] / total) * 2 * Math.PI;
+
+      ctx.beginPath();
+
+      ctx.moveTo(150, 150);
+
+      ctx.arc(150, 150, 120, startAngle, startAngle + sliceAngle);
+
+      ctx.closePath();
+
+      ctx.fillStyle = colors[i];
+
+      ctx.fill();
+
+      startAngle += sliceAngle;
     }
-}
+  }
 
-// =====
-// WATER RECYCLING INFO
-// =====
+  // ===============================
+  // POLLUTION BAR CHART
+  // ===============================
 
-function showWaterInfo() {
-    let info =
-    document.getElementById("innovationInfo");
+  const pollutionCanvas = document.getElementById("pollutionChart");
 
-    if(info){
-        info.innerText = 
-        "Dirty water is purified using treated animal dung, charcoal, sand and gravel filtration systems.";
+  if (pollutionCanvas) {
+    const ptx = pollutionCanvas.getContext("2d");
+
+    const pollutionData = [90, 70, 50, 85, 60];
+
+    const labels = ["Air", "Water", "Plastic", "Noise", "Land"];
+
+    const barWidth = 80;
+    const gap = 25;
+
+    for (let i = 0; i < pollutionData.length; i++) {
+      let x = 50 + i * (barWidth + gap);
+
+      let y = 300 - pollutionData[i] * 2;
+
+      let height = pollutionData[i] * 2;
+
+      // DRAW BAR
+      ptx.fillStyle = "#16a34a";
+
+      ptx.fillRect(x, y, barWidth, height);
+
+      // LABELS
+      ptx.fillStyle = "#000";
+
+      ptx.font = "16px Arial";
+
+      ptx.fillText(labels[i], x + 10, 330);
+
+      // VALUES
+      ptx.fillText(pollutionData[i], x + 20, y - 10);
     }
-}
-
-//====
-// PLASTIC RECYCLING INFO
-// ====
-function showPlasticInfo() {
-    let info =
-    document.getElementById("innovationInfo");
-
-    if(info){
-        info.innerText = 
-        "plastic waste is collected, melted, and transformed into reusable water bottles.";
-    }
-}
-
-// ====
-// SERVICES PAGE INFO
-// ====
-function showService(type) {
-
-    let serviceInfo = 
-    document.getElementById("serviceInfo");
-
-    if(!serviceInfo) return;
-
-    let message = "";
-    if(type === "water") {
-
-        message =
-        "Our recyling system uses treated animal dung and natural filtration to clean dirty water safely.";
-    }
-
-    else if(type === "plastic") {
-
-        message = 
-        "Plastic waste is recycled into reusable water bottle to reduce environmental pollution.";
-    }
-
-    else if(type === "collection") {
-        message =
-        "Residents can request waste collection while lorry owners can join our network.";
-    }
-
-    serviceInfo.innerText = message;
-}
-
-// ====
-// SAVE WASTE DATA 
-// ====
-let wasteForm =
-document.getElementById("wasteForm");
-if(wasteForm){
-
-    wasteForm.addEventListener("submit",
-function(e){
-
-    e.preventDefault();
-
-    let type =
-    document.getElementById("type").value;
-
-
-    let amount =
-    parseFloat(
-        document.getElementById("amount").value
-        );
-
-    let date =
-    document.getElementById("date").value;
-
-    let message =
-    document.getElementById("message");
-
-    // VALIDATION
-    if(
-       !type.trim() ||
-       isNaN(amount) ||
-       amount <= 0
-    ){
-
-        message.innerText =
-        "Please enter valid data.";
-
-        return;
-
-    }
-    // LOCAL STORAGE
-    let data =
-    JSON.parse(
-        localStorage.getItem("wasteData")
-    function drawChart(totals) {
-
-    let canvas =
-    document.getElementById("chart");
-
-    if(!canvas) return;
-
-    let ctx =
-    canvas.getContext("2d");
-
-    ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-    let keys =
-    Object.keys(totals);
-
-    let values =
-    Object.values(totals);
-
-    let total =
-    values.reduce((a,b)=>a+b,0);
-
-    let start = 0;
-
-    keys.forEach((key,index)=>{
-
-        let slice =
-        (values[index] / total)
-        * 2 * Math.PI;
-
-        ctx.beginPath();
-
-        ctx.moveTo(150,150);
-
-        ctx.arc(
-            150,
-            150,
-            100,
-            start,
-            start + slice
-        );
-
-        ctx.fillStyle =
-        `hsl(${index * 80},70%,50%)`;
-
-        ctx.fill();
-
-        start += slice;
-
-    });
-}
-
-    ) || [];
-
-    data.push({
-        type,
-        amount,
-        date
-    });
-
-    localStorage.setItem(
-        "wasteData",
-        JSON.stringify(data)
-    );
-
-    message.innerText =
-    "waste data saved successfully!";
-
-    wasteForm.reset();
+  }
 });
 
-// ====
-// DISPLAY SAVED DATA
-// ====
+// ===============================
+// MISSION BUTTON
+// ===============================
 
-function displayData() {
-    let data =
-    JSON.parse(
-        localStorage.getItem2("wasteData")
-    ) || [];
-     let list =
-     document.getElementById("dataList");
+function showMission() {
+  let mission = document.getElementById("mission");
 
-     if(!list) return;
-
-     list.innerHTML = "";
-
-     let totals = {};
-
-     data.forEach(item => {
-        let li
-        document.createElement("li");
-
-        li.innerText = "";
-        `${item.type} - ${item.amount}kg (${item.date})`;
-
-        list.appendChild(li);
-
-        totals[item.type] =
-        (totals[item.type] || 0)
-        + item.amount;
-
-     });
-
-     drawChart(totals);
+  mission.innerText =
+    "Our mission is to reduce pollution by turning waste into reusable resources through smart recycling technology and community partnerships.";
 }
-displayData();
 
-// ====
-// PIE CHART
-// ====
+// ===============================
+// WATER RECYCLING INFO
+// ===============================
 
-function drawChart(totals) {
-    let canvas =
-    document.getElementById("chart");
+function showWaterInfo() {
+  let info = document.getElementById("innovationInfo");
 
-    if(!canvas) return;
+  info.innerText =
+    "Dirty water is purified using eco-friendly filtration systems, treated animal waste technology, and natural purification methods.";
+}
 
-    let ctx =
-    canvas.getContext("2d");
+// ===============================
+// PLASTIC RECYCLING INFO
+// ===============================
 
-    ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
+function showPlasticInfo() {
+  let info = document.getElementById("innovationInfo");
 
-    let keys =
-    Object.keys(totals);
+  info.innerText =
+    "Plastic waste is collected, cleaned, melted, and transformed into reusable bottles and sustainable eco-products.";
+}
 
-    let values =
-    Object.values(totals);
+// ===============================
+// DARK MODE TOGGLE
+// ===============================
 
-    let total =
-    values.reduce((a,b)=>a+b,0);
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
 
-    let start = 0;
+// ===============================
+// SCROLL TO TOP BUTTON
+// ===============================
 
-    keys.forEach((key, index)=>{
-        
-        let slice =
-        (values[index] / total)
-        * 2 * Math.PI;
+window.onscroll = function () {
+  const topButton = document.getElementById("topBtn");
 
-        ctx.beginPath();
-
-        ctx.moveTo(150,150);
-
-        ctx.arc(
-            150,
-            150,
-            100,
-            start,
-            start + slice
-        );
-
-        ctx.fillStyle =
-        `hsl(${index * 80},
-        70%,50%)`;
-    });
-
-
-    // ====
-    // POLLUTION BAR CHART 
-    // ====
-
-    function drawPollutionChart() {
-        let canvas = 
-        document.getElementById(
-            "pollutionChart"
-        );
-
-        if(!canvas) return;
-
-        let ctx =
-        canvas.getContext("2d");
-
-        let labels = [
-            "Plastic",
-            "Dirty Water",
-            "Air",
-            "Glass",
-            "Organic",
-        ];
-        let values = [
-            90,
-            75,
-            60,
-            45,
-            55,
-        ];
-        ;
-        let barWidth = 70;
-
-        let gap = 25;
-
-        ctx.clearRect(
-            0,
-            0,
-            canvas.width,
-            canvas.height
-        );
-        values.forEach((value,index)=>{
-            let x =
-            index * (barWidth + gap)
-            +40;
-
-            let y =
-            300 - value * 2;
-
-            ctx.fillStyle =
-            "#2e7d32";
-
-            ctx.fillRect(
-                x,
-                y,
-                barWidth,
-                value * 2
-            );
-
-            ctx.fillStyle =
-            "#2e7d32";
-
-            ctx.fillRect(
-                x,
-                y,
-                barWidth,
-                value * 2
-            );
-
-            ctx.fillStyle =
-            "#2e7d32";
-
-            ctx.fillStyle =
-            "#000";
-
-            ctx.font =
-            "14 px Arial";
-
-            ctx.fillText(
-                labels[index],
-                x,
-                320
-            );
-
-            ctx.fillText(
-                value + "%",
-                x + 10,
-                y - 10,
-            );
-        });
+  if (topButton) {
+    if (
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
+    ) {
+      topButton.style.display = "block";
+    } else {
+      topButton.style.display = "none";
     }
-    drawPollutionChart();
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
-
-
-// ====
-// SEARCH FUNCTION
-// ====
-
-function filterData() {
-    let input =
-    document.getElementById("search");
-
-    if(!input) return;
-
-    let filter =
-    input.value.toLowerCase();
-
-    let items = 
-    document.querySelectorAll(
-        "#dataList li"
-    );
-
-    items.forEach (item =>  {
-        item.style.display =
-        item.innerText
-        .toLowerCase()
-        .includes(filter)
-
-        ? "block"
-
-        : "none"
-    });
-
-    // ====
-    // CLEAR DATA
-    //====
-    function clearData() {
-        localStorage.removeItem(
-            "wasteData"
-        );
-        location.reload();
-
-    }
-
-    // ====
-    // DARK MODE
-    // ====
-    
-    function clearData(){
-        document.body.classList.toggle(
-            "dark"
-        );
-    }
-
-}
-
-
-function drawChart(totals) {
-
-    let canvas =
-    document.getElementById("chart");
-
-    if(!canvas) return;
-
-    let ctx =
-    canvas.getContext("2d");
-
-    ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-    let keys =
-    Object.keys(totals);
-
-    let values =
-    Object.values(totals);
-
-    let total =
-    values.reduce((a,b)=>a+b,0);
-
-    let start = 0;
-
-    keys.forEach((key,index)=>{
-
-        let slice =
-        (values[index] / total)
-        * 2 * Math.PI;
-
-        ctx.beginPath();
-
-        ctx.moveTo(150,150);
-
-        ctx.arc(
-            150,
-            150,
-            100,
-            start,
-            start + slice
-        );
-
-        ctx.fillStyle =
-        `hsl(${index * 80},70%,50%)`;
-
-        ctx.fill();
-
-        start += slice;
-
-    });
-}
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
