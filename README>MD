@@ -37,63 +37,24 @@ RecycLink Solutions aims to:
 - Responsive hero section 
 
 ## ✅ Services Page 
-- Water 
-
-
-
-
-
-
-
-
-
-
-
-
-## ✅ Services Page
-- Water recycling information
+- Water recycling information 
 - Plastic bottle recycling information
 - Waste collection services
 - Interactive service cards
 
-## ✅ Contact Page
+## ✅ Contact Page 
 - Waste collection request form
 - Lorry owner registration form
 - localStorage data persistence
 
-## ✅ Extra Features
-- Responsive design
-- CSS animations
-- Dark mode
-- Dynamic JavaScript interactions
-- Search/filter functionality
-- Data persistence using localStorage
-
----
-
-# 🛠️ Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-- Canvas API
+## Technologies used 
+- HTML
+- CSS
+- Java Script
+- Canvas API 
 - localStorage
 
----
-
-# 📊 JavaScript Functionalities
-
-The project uses JavaScript for:
-- DOM manipulation
-- Event handling
-- Form validation
-- Dynamic data updates
-- Charts and visualizations
-- localStorage data saving/retrieval
-
----
-
-# 📱 Responsive Design
+# Responsive design
 
 The application is responsive and works on:
 - Mobile devices
@@ -102,28 +63,6 @@ The application is responsive and works on:
 
 Media queries and flexible layouts were used.
 
----
-
-# 📂 Project Structure
-
-```text id="sn35do"
-RecycLink/
-│
-├── index.html
-├── services.html
-├── contacts.html
-├── style.css
-├── script.js
-│
-└── images/
-    ├── logo.png
-    ├── dashboard.png
-    ├── water-recycle.jpg
-    ├── plastic-recycle.jpg
-    └── waste-collection.jpg
-```
-
----
 
 # ⚙️ How To Run The Project
 
@@ -131,7 +70,6 @@ RecycLink/
 2. Open the project folder
 3. Open `index.html` in your browser
 
----
 
 # 🌱 Future Improvements
 
@@ -140,27 +78,24 @@ RecycLink/
 - GPS-based waste collection requests
 - AI-powered waste sorting suggestions
 
----
 
 # 🐞 Known Bugs
 
 - Charts may not resize perfectly on very small screens
 - localStorage data clears when browser storage is removed
 
----
-
 # 👩‍💻 Author
 
 Developed by:
-Melissa Joseph
-
----
+Melisa Karugi
 
 # 📜 License
 
 This project is for educational purposes only.
 
----
+## Live site
+
+https://github.com/melisaaaaaaa-cloud/Recyclink-solutions
 
 # 🌍 Final Note
 
