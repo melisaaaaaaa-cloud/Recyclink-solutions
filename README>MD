@@ -12,48 +12,41 @@ The platfrom allows users to:
 - Learn about recycling innovations
 - Visualize pollution data using charts
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  RecycLink Solutions
-
-## 🌍 Project Overview
-RecycLink Solutions is a smart waste management web application designed to help communities manage waste responsibly and promote environmental sustainability.
-
-The platform allows users to:
-- Track and record waste data
-- Request waste collection services
-- Join as waste collection lorry owners
-- Learn about recycling innovations
-- Visualize pollution data using charts
-
-The system also introduces innovative environmental solutions such as:
+The system also introduces innovative environmental solutions 
+such as:
 - Recycling dirty water using treated animal dung filtration systems
 - Recycling plastic waste into reusable water bottles
 
----
-
 # 🚀 Problem Statement
-
-Poor waste disposal and environmental pollution continue to affect many communities. Plastic waste, dirty water, and poor waste collection systems contribute heavily to environmental degradation.
+Poor waste disposal and environmental pollution continue to affect meny communities. Plastic waste, dirty water, and poor 
+waste collection systems contribute heavily to environmental degradation.
 
 RecycLink Solutions aims to:
-- Reduce pollution
+- Reduce pollution 
 - Improve waste collection
 - Encourage recycling
 - Promote clean and sustainable communities
 
----
+# 💡 Features
+
+## ✅ Home Dashboard 
+- Waste tracking dashboard 
+- Pie chart visualization 
+- Pollution frequency bar chart
+- Interactive recycling information 
+- Responsive hero section 
+
+## 
+
+
+
+
+
+
+
+
+
+
 
 # 💡 Features
 
