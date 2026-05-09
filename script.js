@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ===============================
-  // SIMPLE PIE CHART
+  // WASTE DASHBOARD SIMPLE PIE CHART
   // ===============================
 
   const chartCanvas = document.getElementById("chart");
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ===============================
-  // POLLUTION BAR CHART
+  // POLLUTION FREQUENCY BAR CHART
   // ===============================
 
   const pollutionCanvas = document.getElementById("pollutionChart");
