@@ -223,13 +223,11 @@ nav a{
 
 /* ===== SERVICE IMAGES ===== */
 .service-card img{
-    width: 100%;      /* makes image fit card */
-    height: 220px;
-
-    object-fit: cover; /* prevents stretching */
-
-    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
+
 
 /* ===== CARD TEXT ===== */
 .service-card h3{
